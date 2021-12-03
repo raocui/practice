@@ -1,2 +1,2 @@
 # practice
-go api接口端
+grpc -  a client application
