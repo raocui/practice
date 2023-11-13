@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"path": "pet-medical/admin-api"
+		},
+		{
+			"path": "pet-medical/awen-patient-wechat"
+		},
+		{
+			"path": "pet-medical/consult-service"
+		},
+		{
+			"path": "pet-medical/Docs"
+		},
+		{
+			"path": "pet-medical/doctor-api"
+		},
+		{
+			"path": "pet-medical/doctor-service"
+		},
+		{
+			"path": "pet-medical/message-api"
+		},
+		{
+			"path": "pet-medical/message-service"
+		},
+		{
+			"path": "pet-medical/nuclei-api"
+		},
+		{
+			"path": "pet-medical/order-service"
+		},
+		{
+			"path": "pet-medical/system-service"
+		},
+		{
+			"path": "pet-medical/user-api"
+		},
+		{
+			"path": "pet-medical/user-service"
+		},
+		{
+			"path": "pet-medical/awen-hospital-web"
+		},
+		{
+			"path": "pet-medical/awen-doctor-web"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"ASPNETCORE_ENVIRONMENT":"uat3"
+		},
+		"go.testEnvFile": "D://gosite_module/pet-medical_test_env.env"
+
+
+	}
+}

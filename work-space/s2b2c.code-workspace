@@ -1,0 +1,106 @@
+{
+	"folders": [
+		{
+			"path": "customer-api"
+		},
+		{
+			"path": "customer-center"
+		},
+		{
+			"path": "personalized-api"
+		},
+		{
+			"path": "virtual-property-service"
+		},
+		{
+			"path": "order-api"
+		},
+		{
+			"path": "order-center"
+		},
+		{
+			"path": "product-api"
+		},
+		{
+			"path": "product-center"
+		},
+		{
+			"path": "boss"
+		},
+		{
+			"path": "datacenter"
+		},
+		{
+			"path": "auth-center"
+		},
+		{
+			"path": "fe-scrm-wechat-vue3"
+		},
+		{
+			"path": "external"
+		},
+		{
+			"path": "upet-center"
+		},
+		{
+			"path": "activity-api"
+		},
+		{
+			"path": "mall"
+		},
+		{
+			"path": "../pet-medical/Docs"
+		},
+		{
+			"path": "integral-center"
+		},
+		{
+			"path": "internal-api"
+		},
+		{
+			"path": "h5"
+		},
+		{
+			"path": "s2b2c-monorepo"
+		},
+		{
+			"path": "pay_echo"
+		},
+		{
+			"path": "paycenter"
+		},
+		{
+			"path": "activity-pin"
+		},
+		{
+			"path": "wisdom-hospital-h5-vue3"
+		},
+		{
+			"path": "content-center"
+		},
+		{
+			"path": "go-filestorage"
+		},
+		{
+			"path": "activity-center"
+		}
+	],
+
+	"settings": {
+		"terminal.integrated.env.windows": {
+			 "ASPNETCORE_ENVIRONMENT":"sit1",
+			 "ENVIRONMENT":"",
+			
+		},
+		"go.delveConfig": {
+			"dlvFlags": ["--check-go-version=false"],
+			
+		},
+		"go.testEnvVars": {
+			"ASPNETCORE_ENVIRONMENT":"sit1",
+			"ENVIRONMENT":"",
+		},
+		"go.testTimeout": "1h",
+		
+	}
+}
