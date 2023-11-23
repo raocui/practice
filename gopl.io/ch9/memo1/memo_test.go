@@ -4,10 +4,9 @@
 package memo_test
 
 import (
+	memo "_/gopl.io/ch9/memo1"
+	"_/gopl.io/ch9/memotest"
 	"testing"
-
-	"gopl.io/ch9/memo1"
-	"gopl.io/ch9/memotest"
 )
 
 var httpGetBody = memotest.HTTPGetBody

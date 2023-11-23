@@ -14,6 +14,7 @@ var (
 	balance int
 )
 
+// 读写互斥锁:sync.RWMutex
 func Deposit(amount int) {
 	mu.Lock()
 	balance = balance + amount
