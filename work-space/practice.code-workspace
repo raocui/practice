@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "practice"
+		},
+		{
+			"path": "pet-medical/Docs"
+		},
+		{
+			"path": "information"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"ASPNETCORE_ENVIRONMENT":"sit1",
+			"ENVIRONMENT":"",
+		   
+	   },
+	   "go.delveConfig": {
+		   "dlvFlags": ["--check-go-version=false"],
+		   
+	   },
+	   "go.testEnvVars": {
+		   "ASPNETCORE_ENVIRONMENT":"sit1",
+		   "ENVIRONMENT":"",
+	   },
+	   "go.testTimeout": "1h",
+	   "go.testFlags":["-v","-count=1"], //单元测试不缓存
+	   
+   }
+	}
+}
