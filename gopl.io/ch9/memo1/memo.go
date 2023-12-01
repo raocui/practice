@@ -28,6 +28,7 @@ func New(f Func) *Memo {
 }
 
 // NOTE: not concurrency-safe!
+// 注意：非并发安全
 func (memo *Memo) Get(key string) (interface{}, error) {
 	res, ok := memo.cache[key]
 	if !ok {

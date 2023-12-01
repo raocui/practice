@@ -1,7 +1,18 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("1111")
-}
+name
+short_name,
+category_id,
+mt_id,
+custom_area,
+ele_id,
+jd_id,
+pic,
+video,
+sku_id,
+a8,
+zilong,
+weight_for_unit,
+bar_code,
+content_pc,
+selling_point,
+brand_id,
+spec_value_id

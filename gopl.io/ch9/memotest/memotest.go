@@ -12,12 +12,13 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 	"sync"
 	"testing"
 	"time"
 )
 
-//!+httpRequestBody
+// !+httpRequestBody
 func httpGetBody(url string) (interface{}, error) {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -43,6 +44,16 @@ func incomingURLs() <-chan string {
 			"https://godoc.org",
 			"https://play.golang.org",
 			"http://gopl.io",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org",
+			"https://golang.org_x",
 		} {
 			ch <- url
 		}
@@ -89,6 +100,12 @@ func Concurrent(t *testing.T, m M) {
 		n.Add(1)
 		go func(url string) {
 			defer n.Done()
+			tmp := strings.Split(url, "_")
+
+			if len(tmp) == 2 {
+				url = tmp[0]
+				time.Sleep(1 * time.Minute)
+			}
 			start := time.Now()
 			value, err := m.Get(url)
 			if err != nil {

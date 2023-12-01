@@ -1,21 +1,10 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+package memo2
 
-// See page 278.
+// 扩展 Func类型和 (*Memo)Get 方法，让调用者可选择性地提供一个 done 通道方便取消操作(参考8.9节)。不要缓存被取消的 Func 调用结果。
 
-// Package memo provides a concurrency-safe non-blocking memoization
-// of a function.  Requests for different keys proceed in parallel.
-// Concurrent requests for the same key block until the first completes.
-// This implementation uses a monitor goroutine.
-package memo
-
-// !+Func
-// Func是用于记忆的函数类型
-// Func is the type of the function to memoize.
 type Func func(key string) (interface{}, error)
 
-// // result是调用 Func 的返回结果
-// A result is the result of calling a Func.
+
 type result struct {
 	value interface{}
 	err   error
@@ -26,9 +15,7 @@ type entry struct {
 	ready chan struct{} // closed when res is ready
 }
 
-//!-Func
 
-//!+get
 
 // A request is a message requesting that the Func be applied to key.
 type request struct {
@@ -90,5 +77,3 @@ func (e *entry) deliver(response chan<- result) {
 }
 
 //!-monitor
-// 与基于互斥锁的版本类似，对于指定键的一次请求负责在该键上调用函数 f，保存结果到entry 中，最后通过关闭 ready 通道来广播准备完毕状态。
-//这个流程通过(*entry).call实现
